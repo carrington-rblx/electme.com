@@ -594,7 +594,7 @@ nav .nav-platform:hover,.footer-links .nav-platform:hover{color:#e83d4b!importan
 </header>
 <main id="home">
 <section class="hero"><div class="hero-content">
-<div class="hero-brand"><img class="hero-full-logo" src="https://raw.githubusercontent.com/carrington-rblx/electament.com/main/f7b0df5a-991f-4c71-b8d8-3063a124801a.png" alt="AmentAmour campaign logo"></div>
+
 <form class="signup" id="hero-form"><input type="email" placeholder="Email Address" aria-label="Email address" required><input inputmode="numeric" placeholder="Zip Code" aria-label="Zip code" required><input class="phone" type="tel" placeholder="Phone Number (Optional)" aria-label="Phone number"><button type="submit">Join the team →</button><span class="legal">By providing your mobile number, you consent to receive campaign calls and text messages. Message and data rates may apply. Reply STOP to opt out.</span><p class="status" id="hero-status" aria-live="polite"></p></form>
 </div></section>
 <section class="intro" id="about"><a class="support-tile" href="https://discord.gg/9B9HCPXgNg" target="_blank" rel="noopener noreferrer"><strong>Support AmentAmour's campaign</strong></a><div class="intro-copy"><span class="eyebrow">Leadership that listens</span><h2>To the People.</h2><p>AmentAmour's campaign puts strong leadership and strategic solutions at the center of his service to the people. Ament focused on strong diplomacy and making public institutions work for the people they serve.</p><p></p><a class="outline-link" href="about-ament.html">Learn more →</a></div></section>
@@ -668,6 +668,43 @@ demoSignup('hero-form','hero-status');demoSignup('vol-form','vol-status');docume
   box-shadow:0 5px 12px rgba(24,45,83,.16)!important;
 }
 
+</style>
+
+
+<style id="hero-signup-black-outline">
+/* Hero signup: transparent fields, black outlines and text */
+.signup input,
+.signup input:hover,
+.signup input:focus,
+.signup input:focus-visible{
+  background:transparent!important;
+  border:1px solid #000!important;
+  color:#000!important;
+  box-shadow:none!important;
+  outline:none!important;
+}
+.signup input::placeholder,
+.signup input:hover::placeholder{
+  color:#000!important;
+  opacity:1!important;
+}
+.signup .legal{color:#000!important}
+.signup button,
+.signup button:hover,
+.signup button:focus-visible{
+  background:#000!important;
+  color:#f0f1ec!important;
+  border:1px solid #000!important;
+  box-shadow:none!important;
+  transition:background-color .2s ease,color .2s ease!important;
+}
+@media(hover:hover){
+  .signup button:hover{
+    background:#ff5a1f!important;
+    color:#000!important;
+  }
+}
+.signup button:focus-visible{outline:2px solid #000!important;outline-offset:3px!important}
 </style>
 
 </body></html>
