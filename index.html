@@ -610,9 +610,12 @@ nav .nav-platform:hover,.footer-links .nav-platform:hover{color:#e83d4b!importan
 }
 #site-opening-intro video{
   display:block!important;
-  width:100%!important;
+  width:100vw!important;
   height:100%!important;
-  object-fit:contain!important;
+  min-width:100%!important;
+  min-height:100%!important;
+  object-fit:cover!important;
+  object-position:center center!important;
 }
 @media(prefers-reduced-motion:reduce){
   #site-opening-intro{transition:opacity .35s ease,visibility .35s ease!important}
