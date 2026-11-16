@@ -760,6 +760,60 @@ header.header-scrolled{
   border-top:0!important;
 }
 </style>
+
+
+<style id="restore-header-navigation-buttons">
+/* Restore the complete navigation and social buttons without a header bar or divider */
+header,
+header.header-scrolled{
+  display:flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  height:auto!important;
+  min-height:58px!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  flex-wrap:nowrap!important;
+}
+header nav{
+  display:flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+header .nav-social{
+  display:flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+@media(max-width:760px){
+  header,
+  header.header-scrolled{
+    min-height:0!important;
+    padding:8px 12px!important;
+    gap:8px!important;
+    flex-wrap:wrap!important;
+    justify-content:space-between!important;
+  }
+  header .brand{order:1!important}
+  header .nav-social{order:2!important;gap:7px!important}
+  header nav{
+    order:3!important;
+    width:100%!important;
+    justify-content:center!important;
+    flex-wrap:wrap!important;
+    gap:12px!important;
+    padding:4px 0 2px!important;
+    font-size:8px!important;
+  }
+  header .nav-social a:not(.nav-donate){
+    width:25px!important;
+    height:25px!important;
+  }
+  header .nav-donate{padding:7px 12px!important}
+}
+</style>
+
 </body></html>
 <style>
 
