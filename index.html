@@ -707,7 +707,18 @@ demoSignup('hero-form','hero-status');demoSignup('vol-form','vol-status');docume
 .signup button:focus-visible{outline:2px solid #000!important;outline-offset:3px!important}
 </style>
 
-</body></html>
+
+<style id="hero-signup-fields-default-hover-state">
+/* Keep hero signup fields in their hovered position and padding from the start */
+.signup input,
+.signup input:hover,
+.signup input:focus,
+.signup input:focus-visible{
+  transform:translateX(6px)!important;
+  padding-left:19px!important;
+}
+</style>
+\n</body></html>
 <style>
 
 /* Bio campaign message: red panel, with the values strip remaining blue */
