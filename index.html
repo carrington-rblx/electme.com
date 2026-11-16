@@ -594,6 +594,7 @@ nav .nav-platform:hover,.footer-links .nav-platform:hover{color:#e83d4b!importan
 </header>
 <main id="home">
 <section class="hero"><div class="hero-content">
+<div class="hero-brand"><img class="hero-full-logo" src="https://raw.githubusercontent.com/carrington-rblx/electme.com/main/02b-horizontal-black-transparent.png" alt="AmentAmour campaign logo"></div>
 
 <form class="signup" id="hero-form"><input type="email" placeholder="Email Address" aria-label="Email address" required><input inputmode="numeric" placeholder="Zip Code" aria-label="Zip code" required><input class="phone" type="tel" placeholder="Phone Number (Optional)" aria-label="Phone number"><button type="submit">Join the team →</button><span class="legal">By providing your mobile number, you consent to receive campaign calls and text messages. Message and data rates may apply. Reply STOP to opt out.</span><p class="status" id="hero-status" aria-live="polite"></p></form>
 </div></section>
@@ -614,17 +615,7 @@ if('IntersectionObserver' in window){const observer=new IntersectionObserver(ent
 
 
 const siteHeader=document.querySelector('header');
-let headerTick=false;
-const syncHeader=()=>siteHeader.classList.toggle('header-scrolled',window.scrollY>2);
-syncHeader();
-window.addEventListener('scroll',()=>{
-  if(headerTick)return;
-  headerTick=true;
-  requestAnimationFrame(()=>{
-    syncHeader();
-    headerTick=false;
-  });
-},{passive:true});
+siteHeader.classList.remove('header-scrolled');
 
 demoSignup('hero-form','hero-status');demoSignup('vol-form','vol-status');document.getElementById('year').textContent=new Date().getFullYear();
 
@@ -1241,3 +1232,40 @@ header .nav-social a:not(.nav-donate):focus-visible{
 }
 </style>
 
+
+
+<style id="hero-logo-and-static-sticky-header">
+.hero-brand .hero-full-logo{
+  display:block!important;
+  width:min(420px,78vw)!important;
+  max-height:110px!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+header,
+header.header-scrolled{
+  position:sticky!important;
+  top:0!important;
+  left:auto!important;
+  right:auto!important;
+  width:100%!important;
+  background:#f0f1ec!important;
+  box-shadow:0 4px 14px rgba(10,24,45,.12)!important;
+  transition:none!important;
+}
+header .brand,
+header nav,
+header .nav-social{
+  transform:none!important;
+}
+@media(max-width:760px){
+  header,
+  header.header-scrolled{
+    top:0!important;
+  }
+  .hero-brand .hero-full-logo{
+    width:min(340px,82vw)!important;
+    max-height:88px!important;
+  }
+}
+</style>
