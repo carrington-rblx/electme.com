@@ -1503,3 +1503,24 @@ header .brand{display:none!important}
   }
 }
 </style>
+
+
+<style id="always-overlap-orbitsolar-tile">
+/* Keep the orange support card visibly overlapping the hero at all times */
+.support-tile{
+  margin-top:-84px!important;
+  transform:translateY(0)!important;
+  border-radius:20px!important;
+  position:relative!important;
+  z-index:12!important;
+}
+.support-tile:hover{
+  transform:translateY(-5px)!important;
+}
+@media(max-width:760px){
+  .support-tile{
+    margin-top:-58px!important;
+    border-radius:16px!important;
+  }
+}
+</style>
