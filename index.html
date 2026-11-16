@@ -707,7 +707,47 @@ demoSignup('hero-form','hero-status');demoSignup('vol-form','vol-status');docume
 .signup button:focus-visible{outline:2px solid #000!important;outline-offset:3px!important}
 </style>
 
-\n</body></html>
+\n
+<style id="navigation-link-button-animation">
+header nav a{
+  display:inline-block;
+  transition:color .22s ease,transform .22s ease;
+}
+header nav a:hover,
+header nav a:focus-visible{
+  transform:translateY(-2px);
+}
+header .nav-social a{
+  transition:background-color .22s ease,border-color .22s ease,color .22s ease,transform .22s ease;
+}
+header .nav-social a:not(.nav-donate):hover,
+header .nav-social a:not(.nav-donate):focus-visible{
+  transform:scale(1.08);
+  background:#ff5a1f!important;
+  border-color:#ff5a1f!important;
+}
+header .nav-social .nav-donate{
+  transition:background-color .22s ease,color .22s ease,transform .22s ease;
+}
+header .nav-social .nav-donate:hover,
+header .nav-social .nav-donate:focus-visible{
+  transform:translateY(-2px);
+}
+@media(prefers-reduced-motion:reduce){
+  header nav a,
+  header .nav-social a{
+    transition:none!important;
+  }
+  header nav a:hover,
+  header nav a:focus-visible,
+  header .nav-social a:hover,
+  header .nav-social a:focus-visible{
+    transform:none!important;
+  }
+}
+</style>
+
+</body></html>
 <style>
 
 /* Bio campaign message: red panel, with the values strip remaining blue */
