@@ -585,8 +585,47 @@ footer{padding:clamp(54px,6vw,82px) var(--campaign-gutter) 42px!important}
 .nav-platform{color:inherit!important;text-decoration:none;white-space:nowrap;transition:color .2s ease}
 nav .nav-platform:hover,.footer-links .nav-platform:hover{color:#e83d4b!important}
 </style>
+
+<style id="site-opening-intro-styles">
+#site-opening-intro{
+  position:fixed!important;
+  inset:0!important;
+  z-index:999999!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100vw!important;
+  height:100vh!important;
+  height:100dvh!important;
+  overflow:hidden!important;
+  background:#000!important;
+  opacity:1;
+  visibility:visible;
+  transition:opacity 1s ease,visibility 1s ease!important;
+}
+#site-opening-intro.is-fading{
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+}
+#site-opening-intro video{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+}
+@media(prefers-reduced-motion:reduce){
+  #site-opening-intro{transition:opacity .35s ease,visibility .35s ease!important}
+}
+</style>
 </head>
 <body>
+<div id="site-opening-intro" aria-label="Liam 2026 logo animation">
+  <video id="site-opening-intro-video" autoplay muted playsinline preload="auto">
+    <source src="https://raw.githubusercontent.com/carrington-rblx/electme.com/main/liam-2026-logo-animation-v2.mp4" type="video/mp4">
+  </video>
+</div>
+
 <a class="announcement" href="#donate" aria-label="Chip in now to support Team Orbitsolar — Donate">Chip in now to stand with Team Orbitsolar and a stronger America. <span class="announcement-cta">Donate <span class="announcement-arrow" aria-hidden="true">→</span></span></a>
 <header>
 
@@ -848,6 +887,27 @@ header.header-scrolled{
 }
 </style>
 
+
+<script id="site-opening-intro-script">
+(function(){
+  var intro=document.getElementById('site-opening-intro');
+  var video=document.getElementById('site-opening-intro-video');
+  if(!intro||!video)return;
+  var dismissed=false;
+  function dismiss(){
+    if(dismissed)return;
+    dismissed=true;
+    intro.classList.add('is-fading');
+    window.setTimeout(function(){if(intro.parentNode)intro.parentNode.removeChild(intro);},1100);
+  }
+  video.addEventListener('ended',dismiss,{once:true});
+  video.addEventListener('error',dismiss,{once:true});
+  var playback=video.play();
+  if(playback&&typeof playback.catch==='function'){
+    playback.catch(function(){dismiss();});
+  }
+})();
+</script>
 </body></html>
 <style>
 
