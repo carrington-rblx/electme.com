@@ -1470,6 +1470,25 @@ header:not(.header-scrolled){
   header:not(.header-scrolled){top:54px!important}
 }
 </style>
+<style id="solid-page-overscroll">
+/* Keep the page solid-colored at the edges without restricting normal scrolling */
+html{
+  min-height:100%;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  overscroll-behavior-y:none!important;
+  background:#f8f8f5!important;
+  touch-action:pan-y;
+}
+body{
+  min-height:100%;
+  height:auto!important;
+  overflow-y:visible!important;
+  overflow-x:hidden!important;
+  background:#f8f8f5!important;
+  touch-action:pan-y;
+}
+</style>
 </head>
 <body>
 <a class="announcement" href="https://discord.com/channels/1530376329348907068/1530376330733031566" aria-label="Add your name to stand with Liam Carrington's write-in campaign — Endorse Liam Carrington" target="_blank" rel="noopener noreferrer">Add your name to stand with Liam Carrington's write-in campaign. <span class="announcement-cta">Endorse Liam Carrington <span class="announcement-arrow" aria-hidden="true">→</span></span></a>
