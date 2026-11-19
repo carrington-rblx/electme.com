@@ -641,6 +641,26 @@ body{
 .campaign-gallery-button:disabled{pointer-events:none}
 @media(max-width:600px){.campaign-gallery-teaser{padding:58px 20px}.campaign-gallery-copy h2{font-size:clamp(34px,9vw,48px)}}
 </style>
+
+<style id="campaign-gallery-black-override">
+#bio.campaign-gallery-teaser{
+  display:flex!important;grid-template-columns:none!important;gap:0!important;
+  width:100%!important;max-width:none!important;box-sizing:border-box!important;
+  margin:0!important;padding:clamp(64px,8vw,112px) var(--campaign-gutter,5vw)!important;
+  background:#000!important;color:#fff!important;
+}
+#bio.campaign-gallery-teaser .campaign-gallery-copy{
+  width:min(900px,100%)!important;max-width:900px!important;margin:0 auto!important;
+  display:flex!important;flex-direction:column!important;align-items:center!important;
+  gap:18px!important;text-align:center!important;background:transparent!important;
+}
+#bio.campaign-gallery-teaser .campaign-gallery-copy .eyebrow{color:#ff5a1f!important}
+#bio.campaign-gallery-teaser .campaign-gallery-copy h2,
+#bio.campaign-gallery-teaser .campaign-gallery-copy p{background:transparent!important;color:#fff!important}
+@media(max-width:600px){
+ #bio.campaign-gallery-teaser{padding:58px 20px!important}
+}
+</style>
 </head>
 <body>
 <a class="announcement" href="https://discord.com/channels/1530376329348907068/1530376330733031566" aria-label="Add your name to stand with Liam Carrington's write-in campaign — Endorse Liam Carrington" target="_blank" rel="noopener noreferrer">Add your name to stand with Liam Carrington's write-in campaign. <span class="announcement-cta">Endorse Liam Carrington <span class="announcement-arrow" aria-hidden="true">→</span></span></a>
