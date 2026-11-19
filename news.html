@@ -1555,9 +1555,13 @@ header:not(.header-scrolled){
   right:auto!important;
   width:100%!important;
   background:transparent!important;
+  border:0!important;
+  border-bottom:0!important;
   box-shadow:none!important;
   transition:none!important;
 }
+header::before,
+header::after{border:0!important;box-shadow:none!important}
 header .brand,
 header nav,
 header .nav-social{
