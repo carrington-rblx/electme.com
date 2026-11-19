@@ -1317,9 +1317,9 @@ nav .nav-platform:hover,.footer-links .nav-platform:hover{color:#e83d4b!importan
 <style id="homepage-announcement-match">
 a.announcement{
  display:flex!important;width:100%!important;box-sizing:border-box!important;
- min-height:58px!important;padding:16px var(--campaign-gutter,20px)!important;
+ min-height:58px!important;padding:16px var(--campaign-gutter)!important;
  align-items:center!important;justify-content:center!important;gap:12px!important;
- background:#000!important;color:#fff!important;text-decoration:none!important;
+ background:#db2a37!important;color:#fff!important;text-decoration:none!important;
  text-align:center!important;font-size:clamp(10px,.85vw,12px)!important;
  line-height:1.45!important;font-weight:800!important;letter-spacing:.025em!important;
  border-radius:0!important;cursor:pointer!important;
@@ -1336,6 +1336,19 @@ a.announcement:hover .announcement-arrow{transform:translateX(4px)!important}
 @media(max-width:430px){
  a.announcement{font-size:9px!important;line-height:1.35!important}
 }
+</style>
+<style id="announcement-hover-transition">
+a.announcement{transition:background-color .22s ease,color .22s ease!important}
+a.announcement:focus-visible{outline:3px solid var(--navy)!important;outline-offset:-3px!important}
+</style>
+<style id="announcement-black-only">
+a.announcement,a.announcement:hover,a.announcement:focus-visible{background-color:#000!important}
+</style>
+<style id="announcement-hover-text-white">
+a.announcement:hover,a.announcement:focus-visible{color:#fff!important;background-color:#000!important}
+a.announcement:hover .announcement-cta,a.announcement:hover .announcement-arrow,
+a.announcement:focus-visible .announcement-cta,a.announcement:focus-visible .announcement-arrow{color:#fff!important}
+a.announcement:hover .announcement-arrow{transform:translateX(4px)!important}
 </style>
 
 </head>
