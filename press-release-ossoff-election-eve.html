@@ -1749,5 +1749,26 @@ window.addEventListener('scroll',()=>{
 demoSignup('hero-form','hero-status');demoSignup('vol-form','vol-status');document.getElementById('year').textContent=new Date().getFullYear();
 
 </script>
+
+<style id="article-announcement-hover-fix">
+/* Restore the light-blue hover state for the article's top announcement */
+a.announcement:hover,
+a.announcement:focus-visible{
+  background:#82bee1!important;
+  background-color:#82bee1!important;
+  color:#172b4d!important;
+}
+a.announcement:hover .announcement-cta,
+a.announcement:hover .announcement-arrow,
+a.announcement:focus-visible .announcement-cta,
+a.announcement:focus-visible .announcement-arrow{
+  color:#172b4d!important;
+}
+a.announcement:hover .announcement-arrow,
+a.announcement:focus-visible .announcement-arrow{
+  transform:translateX(4px)!important;
+}
+</style>
+
 </body>
 </html>
