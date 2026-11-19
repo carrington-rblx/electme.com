@@ -1313,9 +1313,34 @@ nav .nav-platform:hover,.footer-links .nav-platform:hover{color:#e83d4b!importan
 
 
 </style>
+
+<style id="homepage-announcement-match">
+a.announcement{
+ display:flex!important;width:100%!important;box-sizing:border-box!important;
+ min-height:58px!important;padding:16px var(--campaign-gutter,20px)!important;
+ align-items:center!important;justify-content:center!important;gap:12px!important;
+ background:#000!important;color:#fff!important;text-decoration:none!important;
+ text-align:center!important;font-size:clamp(10px,.85vw,12px)!important;
+ line-height:1.45!important;font-weight:800!important;letter-spacing:.025em!important;
+ border-radius:0!important;cursor:pointer!important;
+}
+a.announcement:visited,a.announcement:hover,a.announcement:focus{color:#fff!important;text-decoration:none!important}
+.announcement .announcement-cta{display:inline-flex!important;align-items:center!important;gap:7px!important;
+ color:#fff!important;font-size:inherit!important;font-weight:900!important;white-space:nowrap!important}
+.announcement .announcement-arrow{display:inline-block!important;color:#fff!important;font-size:17px!important;
+ line-height:1!important;transition:transform .2s ease!important}
+a.announcement:hover .announcement-arrow{transform:translateX(4px)!important}
+@media(max-width:760px){
+ a.announcement{min-height:54px!important;padding:13px 16px!important;gap:8px!important;flex-wrap:wrap!important}
+}
+@media(max-width:430px){
+ a.announcement{font-size:9px!important;line-height:1.35!important}
+}
+</style>
+
 </head>
 <body>
-<a class="announcement" href="index.html#donate" aria-label="Chip in now to support Team AmentAmour — Donate">Chip in now to stand with Team AmentAmour and a stronger America. <span class="announcement-cta">Donate <span class="announcement-arrow" aria-hidden="true">→</span></span></a>
+<a class="announcement" href="https://discord.com/channels/1530376329348907068/1530376330733031566" aria-label="Add your name to stand with Liam Carrington's write-in campaign — Endorse Liam Carrington" target="_blank" rel="noopener noreferrer">Add your name to stand with Liam Carrington's write-in campaign. <span class="announcement-cta">Endorse Liam Carrington <span class="announcement-arrow" aria-hidden="true">→</span></span></a>
 <header>
 
 <nav><a href="./">Home</a><a href="news.html" aria-current="page">News</a><a href="images.html">Images</a></nav>
