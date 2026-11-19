@@ -610,16 +610,16 @@ nav .nav-platform:hover,.footer-links .nav-platform:hover{color:#e83d4b!importan
 
 
 <style id="solid-page-overscroll">
-/* Keep the page background consistent when scrolling or overscrolling */
+/* Preserve normal mouse-wheel, trackpad, and touch scrolling */
 html,body{
+  width:100%;
+  min-height:100%;
+  height:auto!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  touch-action:pan-y;
+  overscroll-behavior-y:auto;
   background:var(--paper,#f8f8f5)!important;
-  overscroll-behavior-y:none;
-}
-html{
-  min-height:100%;
-}
-body{
-  min-height:100%;
 }
 </style>
 
