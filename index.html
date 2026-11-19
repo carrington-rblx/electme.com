@@ -610,16 +610,22 @@ nav .nav-platform:hover,.footer-links .nav-platform:hover{color:#e83d4b!importan
 
 
 <style id="solid-page-overscroll">
-/* Preserve normal mouse-wheel, trackpad, and touch scrolling */
-html,body{
-  width:100%;
+/* Keep the page solid-colored at the edges without restricting normal scrolling */
+html{
   min-height:100%;
-  height:auto!important;
   overflow-y:auto!important;
   overflow-x:hidden!important;
+  overscroll-behavior-y:none!important;
+  background:#f8f8f5!important;
   touch-action:pan-y;
-  overscroll-behavior-y:auto;
-  background:var(--paper,#f8f8f5)!important;
+}
+body{
+  min-height:100%;
+  height:auto!important;
+  overflow-y:visible!important;
+  overflow-x:hidden!important;
+  background:#f8f8f5!important;
+  touch-action:pan-y;
 }
 </style>
 
