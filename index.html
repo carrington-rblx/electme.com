@@ -1825,7 +1825,13 @@ header .nav-donate:focus-visible{
 .policy-card-kicker{font:800 9px/1.3 var(--sans);letter-spacing:.2em;margin-bottom:20px}
 .policy-card-back h3{font:800 clamp(28px,4vw,40px)/1.05 var(--serif);margin:0 0 20px}
 .policy-card-copy{font:14px/1.8 var(--sans);max-width:460px;margin:0}
-.policy-card-copy{white-space:pre-line}
+.policy-card-copy{white-space:normal;width:100%;max-width:460px;text-align:left;display:flex;flex-direction:column;gap:20px}
+.policy-card-back{justify-content:flex-start!important;align-items:center!important;padding-top:68px!important;padding-bottom:32px!important}
+.policy-copy-section{width:100%}
+.policy-copy-section h4{font:900 11px/1.3 var(--sans);letter-spacing:.16em;margin:0 0 8px;text-align:left}
+.policy-copy-section p{font:13px/1.65 var(--sans);margin:0;text-align:left}
+.policy-card-copy:not(:has(.policy-copy-section)){white-space:normal;text-align:center}
+@media(max-width:640px){.policy-card-back{padding:62px 25px 28px!important}.policy-card-copy{gap:17px}.policy-copy-section p{font-size:12px;line-height:1.6}}
 .policy-card-note{font:800 9px/1.4 var(--sans);letter-spacing:.12em;text-transform:uppercase;margin-top:25px}
 .policy-overlay.policy-is-black .policy-card-front,
 .policy-overlay.policy-is-black .policy-card-back{background:#000;color:#fff;border-color:#ff5a1f}
@@ -1852,7 +1858,7 @@ body.policy-modal-open{overflow:hidden!important}
  const frontTitle=overlay.querySelector('.policy-card-front-title');
  const copy=overlay.querySelector('.policy-card-copy');
  const policies={
-  foreign:{title:'Foreign Policy',copy:'THE PROBLEM\nFormer Secretary of State and current Vice President Henry Reyes helped orchestrate the foreign blunders that choked off the Suez Canal and Strait of Hormuz, trapping 60,000+ American troops in a bloody stalemate that has already cost 187 U.S. lives.\n\nTHE SOLUTION\nWe will deploy decisive U.S. naval and air superiority, not endless infantry assaults on Cairo, to immediately reopen the Suez Canal and Strait of Hormuz for toll-free global shipping. Leveraging our strategic encirclement of Alexandria, we will force an enforceable ceasefire, dismantle Al-Nabawi’s missile and nuclear capabilities, and bring our troops home without spending a single taxpayer dollar on foreign nation building.'},
+  foreign:{title:'Foreign Policy',problem:'Former Secretary of State and current Vice President Henry Reyes helped orchestrate the foreign blunders that choked off the Suez Canal and Strait of Hormuz, trapping 60,000+ American troops in a bloody stalemate that has already cost 187 U.S. lives.',solution:'We will deploy decisive U.S. naval and air superiority, not endless infantry assaults on Cairo, to immediately reopen the Suez Canal and Strait of Hormuz for toll-free global shipping. Leveraging our strategic encirclement of Alexandria, we will force an enforceable ceasefire, dismantle Al-Nabawi’s missile and nuclear capabilities, and bring our troops home without spending a single taxpayer dollar on foreign nation building.'},
   immigration:{title:'Immigration & Border Security',copy:'A secure and orderly border is essential to a fair immigration system. This placeholder policy emphasizes effective border management, consistent enforcement, and a process that is clear, humane, and accountable.'},
   economic:{title:'Economic Policy',copy:'Families and small businesses need an economy where hard work can create real opportunity. This placeholder policy focuses on responsible public spending, practical support for local businesses, and policies that make everyday life more affordable.'},
   healthcare:{title:'Healthcare',copy:'People deserve access to quality care they can understand and afford. This placeholder policy focuses on improving access, increasing transparency, and putting patients and families at the center of healthcare decisions.'},
@@ -1865,7 +1871,15 @@ body.policy-modal-open{overflow:hidden!important}
  function openPolicy(key,trigger){
   const policy=policies[key];if(!policy)return;
   lastTrigger=trigger;
-  title.textContent=policy.title;frontTitle.textContent=policy.title;copy.textContent=policy.copy;
+  title.textContent=policy.title;frontTitle.textContent=policy.title;copy.replaceChildren();
+  if(policy.problem&&policy.solution){
+   [['THE PROBLEM',policy.problem],['THE SOLUTION',policy.solution]].forEach(([headingText,bodyText])=>{
+    const section=document.createElement('section');section.className='policy-copy-section';
+    const heading=document.createElement('h4');heading.textContent=headingText;
+    const paragraph=document.createElement('p');paragraph.textContent=bodyText;
+    section.append(heading,paragraph);copy.append(section);
+   });
+  }else{copy.textContent=policy.copy||'';}
   overlay.classList.toggle('policy-is-black',trigger.classList.contains('policy-black'));
   overlay.classList.add('is-open');overlay.setAttribute('aria-hidden','false');
   document.body.classList.add('policy-modal-open');
