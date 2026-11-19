@@ -1545,16 +1545,23 @@ header .nav-donate:focus-visible{
 .press-release-meta span{color:#000!important}
 </style>
 <style id="pin-news-navigation-to-viewport">
-/* Keep the navigation links pinned to the top of the viewport while the page scrolls. */
+/* Match the homepage: a compact sticky navigation directly beneath the announcement. */
 header,
 header.header-scrolled,
 header:not(.header-scrolled){
-  position:fixed!important;
+  position:sticky!important;
   top:0!important;
-  left:0!important;
-  right:0!important;
-  z-index:1002!important;
-  transition:background .2s ease,box-shadow .2s ease!important;
+  left:auto!important;
+  right:auto!important;
+  width:100%!important;
+  margin-top:0!important;
+  transform:none!important;
+  transition:none!important;
+}
+header .brand,
+header nav,
+header .nav-social{
+  transform:none!important;
 }
 </style>
 </head>
