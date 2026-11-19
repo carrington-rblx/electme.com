@@ -1546,6 +1546,31 @@ header .nav-donate:focus-visible{
 </style>
 
 
+
+<style id="fixed-transparent-navigation-no-divider">
+/* Keep only the navigation controls fixed; never show a header bar or divider. */
+header,
+header.header-scrolled,
+header:not(.header-scrolled){
+  position:fixed!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  width:100%!important;
+  z-index:1000!important;
+  background:transparent!important;
+  border:0!important;
+  border-bottom:0!important;
+  box-shadow:none!important;
+  outline:0!important;
+}
+header::before,
+header::after{
+  display:none!important;
+  content:none!important;
+}
+</style>
+
 </head>
 <body>
 <a class="announcement" href="https://discord.com/channels/1530376329348907068/1530376330733031566" aria-label="Add your name to stand with Liam Carrington's write-in campaign — Endorse Liam Carrington" target="_blank" rel="noopener noreferrer">Add your name to stand with Liam Carrington's write-in campaign. <span class="announcement-cta">Endorse Liam Carrington <span class="announcement-arrow" aria-hidden="true">→</span></span></a>
