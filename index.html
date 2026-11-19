@@ -1861,6 +1861,7 @@ body.policy-modal-open{overflow:hidden!important}
  const title=overlay.querySelector('#policy-dialog-title');
  const frontTitle=overlay.querySelector('.policy-card-front-title');
  const copy=overlay.querySelector('.policy-card-copy');
+ const cardLogo=overlay.querySelector('.policy-card-logo');
  const policies={
   foreign:{title:'Foreign Policy',problem:'Former Secretary of State and current Vice President Henry Reyes helped orchestrate the foreign blunders that choked off the Suez Canal and Strait of Hormuz, trapping 60,000+ American troops in a bloody stalemate that has already cost 187 U.S. lives.',solution:'We will deploy decisive U.S. naval and air superiority, not endless infantry assaults on Cairo, to immediately reopen the Suez Canal and Strait of Hormuz for toll-free global shipping. Leveraging our strategic encirclement of Alexandria, we will force an enforceable ceasefire, dismantle Al-Nabawi’s missile and nuclear capabilities, and bring our troops home without spending a single taxpayer dollar on foreign nation building.'},
   immigration:{title:'Immigration & Border Security',problem:'While Clara Powers sat in the Senate and the White House, open-border policies caused quarterly crossings to explode 1,248% to 147,000, fueling New Generation Cartel drug pipelines across America.',solution:'We will terminate catch-and-release immediately, complete physical border barriers, and reinstate mandatory detention and rapid deportation for all illegal crossings. Joint federal-military intelligence and DEA task forces will be deployed to dismantle the New Generation Cartel’s smuggling networks, while legal immigration is restructured strictly around merit-based economic need rather than fast-tracked amnesty.'},
@@ -1884,7 +1885,9 @@ body.policy-modal-open{overflow:hidden!important}
     section.append(heading,paragraph);copy.append(section);
    });
   }else{copy.textContent=policy.copy||'';}
-  overlay.classList.toggle('policy-is-black',trigger.classList.contains('policy-black'));
+  const isBlackCard=trigger.classList.contains('policy-black');
+  cardLogo.src=isBlackCard?'image%20(33).png':'02b-horizontal-black-transparent.png';
+  overlay.classList.toggle('policy-is-black',isBlackCard);
   overlay.classList.add('is-open');overlay.setAttribute('aria-hidden','false');
   document.body.classList.add('policy-modal-open');
   close.focus();
