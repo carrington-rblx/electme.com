@@ -1553,7 +1553,7 @@ header,
 header.header-scrolled,
 header:not(.header-scrolled){
   position:fixed!important;
-  top:0!important;
+  top:58px!important;
   left:0!important;
   right:0!important;
   width:100%!important;
@@ -1569,6 +1569,7 @@ header::after{
   display:none!important;
   content:none!important;
 }
+@media(max-width:760px){header,header.header-scrolled,header:not(.header-scrolled){top:54px!important}}
 </style>
 
 </head>
