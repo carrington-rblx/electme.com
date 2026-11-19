@@ -1622,3 +1622,22 @@ header .nav-donate:focus-visible{
   color:#000!important;
 }
 </style>
+
+
+<style id="volunteer-join-button-animation">
+@keyframes volunteerJoinPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(255,90,31,0),0 0 0 rgba(255,90,31,0);transform:scale(1)}
+  50%{box-shadow:0 0 0 5px rgba(255,90,31,.12),0 0 16px rgba(255,90,31,.32);transform:scale(1.025)}
+}
+#volunteer .volunteer-form button.join{
+  animation:volunteerJoinPulse 2.4s ease-in-out infinite;
+}
+#volunteer .volunteer-form button.join:hover,
+#volunteer .volunteer-form button.join:focus-visible{
+  animation:none!important;
+  transform:none!important;
+}
+@media(prefers-reduced-motion:reduce){
+  #volunteer .volunteer-form button.join{animation:none!important}
+}
+</style>
