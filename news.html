@@ -1573,6 +1573,30 @@ header::after{
   display:none!important;
   content:none!important;
 }
+
+/* Keep navigation in normal page flow while scrolling; nav links have no filled backgrounds. */
+header nav a,
+header nav a:visited,
+header nav a:hover,
+header nav a:focus-visible{
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+  box-shadow:none!important;
+}
+header .nav-social a:not(.nav-donate),
+header .nav-social a:not(.nav-donate):visited{
+  background:transparent!important;
+  background-color:transparent!important;
+  background-image:none!important;
+}
+header,
+header.header-scrolled,
+header:not(.header-scrolled){
+  position:relative!important;
+  top:auto!important;
+  transform:none!important;
+}
 </style>
 
 </head>
