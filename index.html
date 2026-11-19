@@ -1755,6 +1755,8 @@ header .nav-donate:focus-visible{
   perspective:1400px;
 }
 .policy-overlay.is-open{opacity:1;visibility:visible;pointer-events:auto}
+.policy-overlay:not(.is-open) .policy-dialog{visibility:hidden}
+.policy-overlay.is-open .policy-dialog{visibility:visible}
 .policy-dialog{position:relative;width:min(590px,92vw);height:min(510px,78vh);min-height:360px;perspective:1400px}
 .policy-close{
   position:absolute;z-index:5;right:12px;top:12px;width:40px;height:40px;border:1px solid currentColor;
@@ -1856,6 +1858,7 @@ footer .footer-logo-art{max-width:100%;height:auto;object-fit:contain}
   margin:0!important;
   box-sizing:border-box!important;
   padding-top:clamp(36px,5vw,56px)!important;
+  padding-bottom:clamp(36px,5vw,56px)!important;
   padding-left:var(--campaign-gutter,5vw)!important;
   padding-right:var(--campaign-gutter,5vw)!important;
   background:#f0f1ec!important;
