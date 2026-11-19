@@ -1461,10 +1461,20 @@ footer .footer-logo-art{max-width:100%;height:auto;object-fit:contain}
 </style>
 
 <style id="remove-announcement-navigation-gap">
-/* Place the News navigation directly beneath the announcement bar. */
+/* Close the visible seam between the announcement and navigation bars. */
 header:not(.header-scrolled){
   top:67px!important;
   background:#f0f1ec!important;
+}
+header:not(.header-scrolled)::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:-12px;
+  height:12px;
+  background:#f0f1ec;
+  pointer-events:none;
 }
 @media(max-width:760px){
   header:not(.header-scrolled){top:54px!important}
