@@ -630,12 +630,23 @@ body{
 <link rel="icon" type="image/png" href="apple-touch-icon.png">
 <link rel="shortcut icon" type="image/png" href="apple-touch-icon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<style id="campaign-gallery-teaser">
+.campaign-gallery-teaser{width:100%;box-sizing:border-box;padding:clamp(64px,8vw,112px) var(--campaign-gutter,5vw);background:#080808;color:#fff;display:flex;justify-content:center;text-align:center}
+.campaign-gallery-copy{width:min(900px,100%);display:flex;flex-direction:column;align-items:center;gap:18px}
+.campaign-gallery-copy .eyebrow{color:#ff5a1f!important}
+.campaign-gallery-copy h2{margin:0;color:#fff;font-family:var(--serif,Georgia,serif);font-size:clamp(36px,5.5vw,68px);line-height:1.06;letter-spacing:-.025em}
+.campaign-gallery-copy p{max-width:700px;margin:0;color:rgba(255,255,255,.82);font-size:clamp(15px,1.5vw,18px);line-height:1.75}
+.campaign-gallery-button{margin-top:10px;padding:15px 24px;border:1px solid #ff5a1f;border-radius:2px;background:transparent;color:#ff5a1f;font:800 12px/1.2 inherit;letter-spacing:.08em;text-transform:uppercase;opacity:.72;cursor:not-allowed}
+.campaign-gallery-button:disabled{pointer-events:none}
+@media(max-width:600px){.campaign-gallery-teaser{padding:58px 20px}.campaign-gallery-copy h2{font-size:clamp(34px,9vw,48px)}}
+</style>
 </head>
 <body>
 <a class="announcement" href="https://discord.com/channels/1530376329348907068/1530376330733031566" aria-label="Add your name to stand with Liam Carrington's write-in campaign — Endorse Liam Carrington" target="_blank" rel="noopener noreferrer">Add your name to stand with Liam Carrington's write-in campaign. <span class="announcement-cta">Endorse Liam Carrington <span class="announcement-arrow" aria-hidden="true">→</span></span></a>
 <header>
 
-<nav><a href="./">Home</a><a href="news.html">News</a><a href="images.html">Images</a></nav>
+<nav><a href="./">Home</a><a href="#bio">The Campaign</a><a href="news.html">News</a><a href="images.html">Images</a></nav>
 <div class="nav-social"><a href="https://discord.gg/9B9HCPXgNg" aria-label="Discord" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M19.7 5.3A18.5 18.5 0 0 0 15.2 4l-.6 1.2a17 17 0 0 0-5.2 0L8.8 4a18.5 18.5 0 0 0-4.5 1.3C1.5 9.5.7 13.6 1.1 17.6a18.2 18.2 0 0 0 5.5 2.8l1.2-2a11.8 11.8 0 0 1-1.9-.9l.5-.4a13.2 13.2 0 0 0 11.2 0l.5.4a11.8 11.8 0 0 1-1.9.9l1.2 2a18.2 18.2 0 0 0 5.5-2.8c.5-4.6-.8-8.7-3.2-12.3ZM8.8 14.8c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm6.4 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg></a><a class="nav-donate" href="#donate">Endorse Liam</a></div>
 </header>
 <main id="home">
@@ -649,7 +660,7 @@ body{
 <section class="campaign-statement" aria-label="Campaign statement"><span class="campaign-statement-title">Bringing Back America from Stupidity</span></section>
 
 <section class="volunteer" id="volunteer"><div class="volunteer-form"><span class="eyebrow">Sign up</span><h2>Volunteer</h2><form id="vol-form"><input type="email" placeholder="Email Address" aria-label="Volunteer email" required><input placeholder="Zip Code" aria-label="Volunteer zip code" required><input type="tel" placeholder="Phone Number" aria-label="Volunteer phone"><button class="join" type="submit">Join the team →</button><span class="legal">Your information is not sent or stored by this preview. Connect the campaign's approved signup system before launch.</span><p class="status" id="vol-status" aria-live="polite"></p></form></div><div class="volunteer-photo"><img src="https://raw.githubusercontent.com/carrington-rblx/electme.com/main/1695914171_126470110962659_1772411443599.png" alt="Community members spending time together"></div></section>
-<section id="bio" class="intro" style="padding-top:45px"><div class="intro-copy"><span class="eyebrow">The campaign</span><h2>Leadership for everyone.</h2><p>Learn more about AmentAmour's priorities and the values guiding this campaign. Official biography and policy details should be verified by the campaign before publication.</p><a class="outline-link" href="#volunteer">Get involved →</a></div></section>
+<section id="bio" class="campaign-gallery-teaser"><div class="campaign-gallery-copy"><span class="eyebrow">The campaign</span><h2>Out on the trail.<br>Listening to your stories.</h2><p>From neighborhood conversations to community events, every stop is a chance to hear what matters to you. Take a look at the people we meet, the places we visit, and the stories that move this campaign forward.</p><button class="campaign-gallery-button" type="button" disabled aria-disabled="true">Explore the Gallery · Coming Soon</button></div></section>
 <section id="donate" class="policy-section" aria-labelledby="policy-heading">
   <div class="policy-inner">
     <span class="eyebrow">Make a difference</span>
