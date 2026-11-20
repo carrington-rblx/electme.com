@@ -1757,16 +1757,22 @@ demoSignup('hero-form','hero-status');demoSignup('vol-form','vol-status');docume
 
 <style id="article-announcement-hover-fix">
 /* Keep the article announcement black in every interaction state */
-a.announcement,
-a.announcement:visited,
-a.announcement:hover,
-a.announcement:focus,
-a.announcement:focus-visible,
-a.announcement:active{
+html body a.announcement,
+html body a.announcement:link,
+html body a.announcement:visited,
+html body a.announcement:hover,
+html body a.announcement:focus,
+html body a.announcement:focus-visible,
+html body a.announcement:active{
   background:#000!important;
   background-color:#000!important;
+  background-image:none!important;
   color:#fff!important;
   text-decoration:none!important;
+  box-shadow:none!important;
+  filter:none!important;
+  transform:none!important;
+  opacity:1!important;
 }
 a.announcement .announcement-cta,
 a.announcement .announcement-arrow,
