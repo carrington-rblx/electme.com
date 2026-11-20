@@ -1015,10 +1015,6 @@ body{
 .footer-social a.footer-social-link img{display:block!important;width:20px!important;height:20px!important;object-fit:contain!important;flex:0 0 auto!important}
 
 </style>
-<style id="final-announcement-accent">
-a.announcement{background-color:#db2a37!important}
-a.announcement:hover,a.announcement:focus-visible{background-color:var(--blue)!important}
-</style>
 <style id="news-page-design">
 .news-hero{
   min-height:470px;
@@ -1329,16 +1325,6 @@ a.announcement:hover,a.announcement:focus-visible{background-color:var(--blue)!i
 }
 </style>
 
-<style id="homepage-announcement-final-colors">
-a.announcement{background-color:#db2a37!important}
-a.announcement:hover,a.announcement:focus-visible{background-color:var(--blue)!important}
-a.announcement,a.announcement:hover,a.announcement:focus-visible{background-color:#000!important}
-a.announcement:hover,a.announcement:focus-visible{color:#fff!important;background-color:#000!important}
-a.announcement:hover .announcement-cta,a.announcement:hover .announcement-arrow,
-a.announcement:focus-visible .announcement-cta,a.announcement:focus-visible .announcement-arrow{color:#fff!important}
-a.announcement:hover .announcement-arrow{transform:translateX(4px)!important}
-.announcement-arrow{color:#fff!important}
-</style>
 <style>
 
 /* Final proportion, spacing and embedded-brand-art refinements */
@@ -1669,8 +1655,6 @@ a.announcement{
 a.announcement:visited{color:#fff!important;text-decoration:none!important}
 .announcement .announcement-cta{display:inline-flex!important;align-items:center!important;gap:7px!important;color:#fff!important;font-size:inherit!important;font-weight:900!important;white-space:nowrap!important}
 .announcement .announcement-arrow{display:inline-block!important;color:#fff!important;font-size:17px!important;line-height:1!important;transition:transform .2s ease!important}
-a.announcement:hover,a.announcement:focus-visible{background:var(--blue)!important;color:var(--navy)!important;text-decoration:none!important}
-a.announcement:hover .announcement-cta,a.announcement:hover .announcement-arrow,a.announcement:focus-visible .announcement-cta,a.announcement:focus-visible .announcement-arrow{color:var(--navy)!important}
 a.announcement:hover .announcement-arrow{transform:translateX(4px)!important}
 a.announcement:focus-visible{outline:3px solid var(--navy)!important;outline-offset:-3px!important}
 @media(max-width:760px){
@@ -1756,37 +1740,33 @@ demoSignup('hero-form','hero-status');demoSignup('vol-form','vol-status');docume
 </script>
 
 <style id="article-announcement-hover-fix">
-/* Keep the article announcement black in every interaction state */
+/* The article announcement must remain black in every interaction state. */
 html body a.announcement,
 html body a.announcement:link,
 html body a.announcement:visited,
 html body a.announcement:hover,
 html body a.announcement:focus,
 html body a.announcement:focus-visible,
-html body a.announcement:active{
-  background:#000!important;
-  background-color:#000!important;
-  background-image:none!important;
-  color:#fff!important;
-  text-decoration:none!important;
-  box-shadow:none!important;
-  filter:none!important;
-  transform:none!important;
-  opacity:1!important;
+html body a.announcement:active {
+  background: #000 !important;
+  background-color: #000 !important;
+  background-image: none !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
+  opacity: 1 !important;
 }
-a.announcement .announcement-cta,
-a.announcement .announcement-arrow,
-a.announcement:hover .announcement-cta,
-a.announcement:hover .announcement-arrow,
-a.announcement:focus-visible .announcement-cta,
-a.announcement:focus-visible .announcement-arrow,
-a.announcement:active .announcement-cta,
-a.announcement:active .announcement-arrow{
-  color:#fff!important;
-}
-a.announcement:hover .announcement-arrow,
-a.announcement:focus-visible .announcement-arrow{
-  transform:none!important;
+html body a.announcement .announcement-cta,
+html body a.announcement .announcement-arrow,
+html body a.announcement:hover .announcement-cta,
+html body a.announcement:hover .announcement-arrow,
+html body a.announcement:focus .announcement-cta,
+html body a.announcement:focus .announcement-arrow,
+html body a.announcement:active .announcement-cta,
+html body a.announcement:active .announcement-arrow {
+  color: #fff !important;
 }
 </style>
 
